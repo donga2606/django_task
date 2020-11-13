@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dash board</title>
+    </head>
+    <body>
+        <h1>Dashboard</h1>
+        <ul>
+            {% for cate in categories %}
+            <li><a href="{% url 'posts_in_category' cate.pk %}">{{cate.name}}</li></a>
+            <a href="#">New Post</a>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

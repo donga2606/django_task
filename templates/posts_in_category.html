@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ posts.category.name }}</title>
+    </head>
+    <body>
+        <h1>Dashboard</h1>
+        <ul>
+            {% for post in posts %}
+            <li>{{ post.subject }}</li><a href="{% url 'edit_post' post.category.pk post.pk %}">Edit</a>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
